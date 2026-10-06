@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -101,3 +102,7 @@ Route::prefix('comments')->group(function () {
     });
 });
 
+Route::post('books', [BookController::class, 'store']);
+Route::get('books/{id}', [BookController::class, 'show']);
+Route::get('books', [BookController::class, 'index']);
+Route::put('books/{id}', [BookController::class, 'update']);
