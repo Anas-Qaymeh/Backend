@@ -100,7 +100,7 @@ Route::prefix('comments')->group(function () {
 
         return 'OK';
     });
-});
+}); 
 
 Route::post('books', [BookController::class, 'store']);
 Route::get('books/{id}', [BookController::class, 'show']);
